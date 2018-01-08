@@ -23,20 +23,19 @@
         tools:layout_editor_absoluteX="72dp"
         tools:layout_editor_absoluteY="357dp" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="82dp" />
-
     <ImageView
         android:id="@+id/goatImg"
+        android:layout_width="221dp"
+        android:layout_height="175dp"
+        app:srcCompat="@color/grey_300"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="99dp" />
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@color/grey_300"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="239dp" />
+        android:text="TextView"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="305dp" />
 </android.support.constraint.ConstraintLayout>

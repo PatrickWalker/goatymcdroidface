@@ -23,6 +23,8 @@
         <activity
             android:name=".FirebaseUIActivity"
             android:label="@string/label_firebase_ui" />
+        <activity android:name=".RateGoatActivity"
+            android:label="@string/label_rate_goats" />
     </application>
 
 </manifest>
