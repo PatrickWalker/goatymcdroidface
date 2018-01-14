@@ -1,41 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/grey_100"
+    android:orientation="vertical"
+    android:weightSum="4">
 
-    <SeekBar
-        android:id="@+id/seekBar"
-        style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:max="10"
-        android:progress="3"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="427dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <RatingBar
-        android:id="@+id/ratingBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="357dp" />
+        <TextView
+            android:id="@+id/banner"
+            android:layout_width="351dp"
+            android:layout_height="43dp"
+            android:text="TextView"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="22dp" />
 
-    <ImageView
-        android:id="@+id/goatImg"
-        android:layout_width="221dp"
-        android:layout_height="175dp"
-        app:srcCompat="@color/grey_300"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="99dp" />
+        <ImageView
+            android:id="@+id/goatImg"
+            android:layout_width="245dp"
+            android:layout_height="175dp"
+            android:layout_below="@+id/banner"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/Title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/banner" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="305dp" />
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="64dp"
+            android:layout_height="24dp"
+            android:layout_alignLeft="@+id/Uploader"
+            android:layout_alignStart="@+id/Uploader"
+            android:layout_below="@+id/goatImg"
+            android:layout_marginTop="29dp"
+            tools:layout_editor_absoluteX="99dp"
+            tools:layout_editor_absoluteY="274dp" />
+
+        <TextView
+            android:id="@+id/Uploader"
+            android:layout_width="65dp"
+            android:layout_height="27dp"
+            android:layout_alignEnd="@+id/ratingBar"
+            android:layout_alignRight="@+id/ratingBar"
+            android:layout_below="@+id/Title"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="29dp"
+            app:layout_constraintTop_toBottomOf="@+id/Title"
+            tools:layout_editor_absoluteX="99dp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="245dp"
+            android:layout_height="48dp"
+            android:layout_alignLeft="@+id/TitleLabel"
+            android:layout_alignStart="@+id/TitleLabel"
+            android:layout_below="@+id/Uploader"
+            android:layout_marginTop="37dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/TitleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/Title"
+            android:layout_alignBottom="@+id/Title"
+            android:layout_alignLeft="@+id/goatImg"
+            android:layout_alignStart="@+id/goatImg"
+            android:text="Titlle" />
+
+        <TextView
+            android:id="@+id/UploaderLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/Uploader"
+            android:layout_alignBottom="@+id/Uploader"
+            android:layout_alignLeft="@+id/ratingBar"
+            android:layout_alignStart="@+id/ratingBar"
+            android:text="Uploader" />
+    </RelativeLayout>
+</LinearLayout>
