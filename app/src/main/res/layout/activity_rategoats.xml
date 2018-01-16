@@ -40,25 +40,22 @@
 
         <TextView
             android:id="@+id/Title"
-            android:layout_width="64dp"
+            android:layout_width="150dp"
             android:layout_height="24dp"
             android:layout_alignLeft="@+id/Uploader"
             android:layout_alignStart="@+id/Uploader"
-            android:layout_below="@+id/goatImg"
-            android:layout_marginTop="29dp"
+            android:layout_centerVertical="true"
             tools:layout_editor_absoluteX="99dp"
             tools:layout_editor_absoluteY="274dp" />
 
         <TextView
             android:id="@+id/Uploader"
-            android:layout_width="65dp"
+            android:layout_width="150dp"
             android:layout_height="27dp"
-            android:layout_alignEnd="@+id/ratingBar"
-            android:layout_alignRight="@+id/ratingBar"
+            android:layout_alignEnd="@+id/more_goats"
+            android:layout_alignRight="@+id/more_goats"
             android:layout_below="@+id/Title"
-            android:layout_marginEnd="60dp"
-            android:layout_marginRight="60dp"
-            android:layout_marginTop="29dp"
+            android:layout_marginTop="11dp"
             app:layout_constraintTop_toBottomOf="@+id/Title"
             tools:layout_editor_absoluteX="99dp" />
 
@@ -69,7 +66,8 @@
             android:layout_alignLeft="@+id/TitleLabel"
             android:layout_alignStart="@+id/TitleLabel"
             android:layout_below="@+id/Uploader"
-            android:layout_marginTop="37dp"
+            android:layout_marginTop="26dp"
+            android:numStars="5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -95,5 +93,14 @@
             android:layout_alignLeft="@+id/ratingBar"
             android:layout_alignStart="@+id/ratingBar"
             android:text="Uploader" />
+
+        <Button
+            android:id="@+id/more_goats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ratingBar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            android:text="@string/more_button" />
     </RelativeLayout>
 </LinearLayout>
